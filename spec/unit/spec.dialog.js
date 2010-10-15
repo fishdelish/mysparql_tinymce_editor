@@ -1,0 +1,2 @@
+describe 'Editor Dialog'
+end
