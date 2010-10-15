@@ -5,6 +5,6 @@ load('lib/mysparql/editor_plugin.js')
 load('spec/unit/spec.helper.js')
 
 JSpec
-.exec('spec/unit/spec.js')
+.exec('spec/unit/spec.editor_plugin.js')
 .run({ reporter: JSpec.reporters.Terminal, fixturePath: 'spec/fixtures' })
 .report()

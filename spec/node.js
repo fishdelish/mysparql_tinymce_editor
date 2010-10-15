@@ -5,6 +5,6 @@ require('unit/spec.helper')
 require('mysparql/editor_plugin')
 
 JSpec
-  .exec('spec/unit/spec.js')
+  .exec('spec/unit/spec.editor_plugin.js')
   .run({ reporter: JSpec.reporters.Terminal, fixturePath: 'spec/fixtures', failuresOnly: true })
   .report()
