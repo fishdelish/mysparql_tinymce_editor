@@ -2,8 +2,16 @@
   <head>
     <title>{#mysparql.dialog.title}</title>
     <script src="../../tinymce_dialog.js"></script>
+    <script src="js/jquery-1.4.3.js"></script>
   </head>
   <body>
+    <form id="mysparql">
+      <input type="text" name="data-source" />
+      <textarea name="sparql-query">
+      </textarea>
+      <input type="submit" name="insert" value="Insert" />
+      <input type="submit" name="cancel" value="Cancel" />
+    </form>
     <script src="js/mysparql_dialog.js"></script>
   </body>
 </html>
