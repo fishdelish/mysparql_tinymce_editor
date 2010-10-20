@@ -1,13 +1,16 @@
 
-# YourLib
+# MySparql TinyMCE plugin
 
-Description
+A plugin to allow TinyMCE to act as a query editor for a MySparql server.
+The plugin has been developed using the JSpec unit specification library.
+To install into TinyMCE, all that is required is the lib/mysparql directory, which contains a standard TinyMCE plugin. 
+Simply copy this directory into your TinyMCE plugins folder and add the mysparql button to your advanced layout.
 
 ## License 
 
 (The MIT License)
 
-Copyright (c) 2009 Your Name &lt;Your Email&gt;
+Copyright (c) 2009 David Workman, Hedtek Ltd. david@hedtek.com
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
