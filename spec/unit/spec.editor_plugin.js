@@ -8,7 +8,8 @@ describe 'Editor Plugin'
  
   describe 'plugin creation'
     it 'should create a TinyMCE plugin'
-      tinymce.should_receive("create").with_args('tinymce.plugins.MysparqlPlugin', an_instance_of(MySparqlSetup));
+      args = {init : new MySparqlSetup().init, createControl : new MySparqlSetup().createControl, getInfo : new MySparqlSetup().getInfo}
+      tinymce.should_receive("create").with_args('tinymce.plugins.MysparqlPlugin', args);
       subject = new MySparqlPlugin(tinymce);
     end
     
