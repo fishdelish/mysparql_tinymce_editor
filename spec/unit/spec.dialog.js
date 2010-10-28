@@ -33,12 +33,25 @@ describe 'Editor Dialog'
     end
   end
 
+  describe "pre-initialization of the dialog"
+    before_each
+      tinyMCEPopup = {}
+      tinyMCEPopup.stub("requireLangPack")
+      subject.tinyMCEPopup = tinyMCEPopup
+    end
+
+    it "should load the language pack for TinyMCE"
+      tinyMCEPopup.should_receive("requireLangPack")
+      subject.preInit()
+    end
+  end
+
   describe "handling the mysparql response"
     before_each
       tinyMCEPopup = {}
       tinyMCEPopup.stub("close")
       subject.tinyMCEPopup = tinyMCEPopup
-      data = {}
+      data = {query_url : "http://mysparql.test.host/query/12345"}
     end
 
     it 'should close the dialog'
