@@ -1,6 +1,6 @@
 describe 'Editor Plugin'
   before_each
-    tinymce = {PluginManager : {}, plugins : {MySparqlPlugin : {}}}
+    tinymce = {PluginManager : {}, plugins : {MysparqlPlugin : {}}}
     tinymce.stub('create')
     tinymce.PluginManager.stub("requireLangPack")
     tinymce.PluginManager.stub("add")
@@ -8,7 +8,7 @@ describe 'Editor Plugin'
  
   describe 'plugin creation'
     it 'should create a TinyMCE plugin'
-      tinymce.should_receive("create").with_args('tinymce.plugins.MySparqlPlugin', an_instance_of(MySparqlSetup));
+      tinymce.should_receive("create").with_args('tinymce.plugins.MysparqlPlugin', an_instance_of(MySparqlSetup));
       subject = new MySparqlPlugin(tinymce);
     end
     
@@ -18,7 +18,7 @@ describe 'Editor Plugin'
     end
  
     it 'should register the plugin'
-      tinymce.PluginManager.should_receive("add").with_args("mysparql", tinymce.plugins.MySparqlPlugin)
+      tinymce.PluginManager.should_receive("add").with_args("mysparql", tinymce.plugins.MysparqlPlugin)
       subject = new MySparqlPlugin(tinymce);
     end
   end
