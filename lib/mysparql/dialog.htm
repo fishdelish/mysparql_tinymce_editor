@@ -6,11 +6,49 @@
   </head>
   <body>
     <form id="mysparql">
-      <input type="text" name="data-source" />
-      <textarea name="sparql-query">
-      </textarea>
-      <input type="submit" name="insert" value="Insert" />
-      <input type="submit" name="cancel" value="Cancel" />
+      <div class="tabs">
+        <ul>
+          <li id="query_tab" class="current"><span><a href="javascript:mcTabs.displayTab('general_tab','general_panel');" onmousedown="return false;">{#mysparql.dialog.query_tab}</a></span></li>
+        </ul>
+      </div>
+      <div class="panel_wrapper">
+        <div id="general_panel" class="panel current">
+          <fieldset>
+            <legend>{#mysparql.dialog.query}</legend>
+            <table>
+              <tr>
+                <td class="column1">
+                  <label for="data-source">{#mysparql.dialog.data-source}</label>
+                </td>
+                <td colspan="2">
+                  <input type="text" name="data-source" />
+                </td>
+              </tr>
+              <tr>
+                <td class="column1">
+                  <label for="data-source">{#mysparql.dialog.query}</label>
+                </td>
+                <td colspan="2">         
+                  <textarea name="sparql-query"></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td class="column1">
+                  <label for="data-formatter">{#mysparql.dialog.formatter}</label>
+                </td>
+                <td colspan="2">
+                  <input name="data_formatter" type="radio" value="table" /> - table
+                  <input name="data_formatter" type="radio" value="tutorial" /> - tutorial
+                </td>
+            </table>
+          </fieldset>
+        </div>
+      </div>
+      <div class="mceActionPanel">    
+        <div style="float:left;">
+          <input type="submit" name="insert" value="Insert" />
+        </div>
+      </div>
     </form>
     <script src="js/mysparql_dialog.js"></script>
   </body>
