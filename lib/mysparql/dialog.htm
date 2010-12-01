@@ -27,7 +27,7 @@
                   <label for="data-source">SPARQL Endpoint</label>
                 </td>
                 <td colspan="2">
-                  <input type="text" name="data-source" />
+                  <input type="text" name="data-source" style="width:500px;" />
                 </td>
               </tr>
               <tr>
@@ -52,15 +52,15 @@
         <div id="preview_panel" class="panel">
           <fieldset>
             <legend>Preview</legend>
-            <div id="preview_results" style="height:400px; overflow:auto;">
+            <div id="preview_results" style="height:400px; width:500px; overflow:auto; border: 1px solid black;">
             </div>
-            <input type="submit" name="preview" value="Preview" class="button" id="preview_button" />
           </fieldset>
         </div>
       </div>
       <div class="mceActionPanel">    
         <div style="float:left;">
           <input type="submit" name="insert" value="Insert" id="insert" />
+          <input type="submit" name="preview" value="Preview" class="button" id="preview_button" />
         </div>
       </div>
     </form>
