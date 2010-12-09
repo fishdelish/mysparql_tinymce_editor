@@ -14,6 +14,7 @@
       <div class="tabs">
         <ul>
           <li id="query_tab" class="current"><span><a href="javascript:mcTabs.displayTab('query_tab','query_panel');" onmousedown="return false;">Query</a></span></li>
+          <li id="xslt-input"><span><a href="javascript:mcTabs.displayTab('xslt-input', 'xslt_panel');" onmousedown="return false;">XSLT</a></span></li>
           <li id="preview_tab"><span><a href="javascript:mcTabs.displayTab('preview_tab', 'preview_panel');" onmousedown="return false;">Preview</a></span></li>
         </ul>
       </div>
@@ -45,16 +46,36 @@
                 <td colspan="2">
                   <input name="data_formatter" type="radio" value="table" /> - Table
                   <input name="data_formatter" type="radio" value="tutorial" /> - Tutorial
-                  <input id="xslt-select" name="data_formatter" type="radio" value="xslt" /> - xslt
+                  <input name="data_formatter" type="radio" value="xslt" /> - XSLT
                 </td>
               </tr>
-              <tr id="xslt-input">
+            </table>
+          </fieldset>
+        </div>
+        <div id="xslt_panel" class="panel">
+          <fieldset>
+            <legend>XSLT settings</legend>
+            <table>
+              <tr>
+                <td colspan="3">
+                  Fill in either an XSLT URL or supply a custom XSLT stylesheet for the server
+                </td>
+              </tr>
+              <tr>
                  <td class="column1">
                    XSLT sheet URL
                  </td>
                  <td colspan="2">
-                   <input name="xslt-url" type="text" />
+                   <input name="xslt-url" type="text" style="width:500px;" />
                  </td>
+              </tr>
+              <tr>
+                <td class="column1">
+                  XSLT Stylesheet
+                </td>
+                <td colspan="2">
+                  <textarea name="xslt-sheet" style="height:300px;width:500px;"></textarea>
+                </td>
               </tr>
             </table>
           </fieldset>
