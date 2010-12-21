@@ -15,6 +15,7 @@
         <ul>
           <li id="query_tab" class="current"><span><a href="javascript:mcTabs.displayTab('query_tab','query_panel');" onmousedown="return false;">Query</a></span></li>
           <li id="xslt-input"><span><a href="javascript:mcTabs.displayTab('xslt-input', 'xslt_panel');" onmousedown="return false;">XSLT</a></span></li>
+          <li id="google-viz"><span><a href="javascript:mcTabs.displayTab('google-viz', 'google_panel');" onmousedown="return false;">Google</a></span></li>
           <li id="preview_tab"><span><a href="javascript:mcTabs.displayTab('preview_tab', 'preview_panel');" onmousedown="return false;">Preview</a></span></li>
         </ul>
       </div>
@@ -48,9 +49,17 @@
                   <input name="data_formatter" type="radio" value="table" /> - Table
                   <input name="data_formatter" type="radio" value="tutorial" /> - Tutorial
                   <input name="data_formatter" type="radio" value="xslt" /> - XSLT
+                  <input name="data_formatter" type="radio" value="google" /> - Google visualization
                 </td>
               </tr>
             </table>
+          </fieldset>
+        </div>
+        <div id="google_panel" class="panel">
+          <div class="errors" style="color:red;"></div>
+          <fieldset>
+            <legend>Google Visualisation settings</legend>
+
           </fieldset>
         </div>
         <div id="xslt_panel" class="panel">
@@ -77,6 +86,18 @@
                 </td>
                 <td colspan="2">
                   <textarea name="query[xslt_sheet]" style="height:300px;width:500px;"></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td class="column1">
+                  XSLT output type
+                </td>
+                <td colspan="2">
+                  <select name="query[xslt_type]" id="xslt_type">
+                    <option selected="selected" value="html">HTML</option>
+                    <option value="json">JSON</option>
+                    <option value="text">Text</option>
+                  </select>
                 </td>
               </tr>
             </table>
