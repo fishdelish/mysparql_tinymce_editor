@@ -7,6 +7,7 @@
     <script type="text/javascript" src="../../utils/validate.js"></script>
     <script type="text/javascript" src="../../utils/editable_selects.js"></script>
     <script src="js/jquery-1.4.3.js"></script>
+    <script src="js/jquery.json.js"></script>
     <link href="css/mysparql.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
@@ -77,9 +78,39 @@
                     <option value="Map">Map</option>
                     <option value="AreaChart">Area Chart</option>
                     <option value="BarChart">Bar Chart</option>
+                    <option value="ColumnChart">Column Chart</option>
+                    <option value="GeoMap">GeoMap</option>
                     <option value="Gauge">Gauge</option>
-                    <option value="MagicTable">Magic Table</option>
                   </select>
+                </td>
+              </tr>
+            </table>
+          </fieldset>
+          <fieldset>
+            <legend>Visualisation options</legend>
+            <table id="google-opts">
+              <tr>
+                <td class="column1">
+                  Width
+                </td>
+                <td colspan="2">
+                  <input type="text" name="width" data-type="number" value="300"/>
+                </td>
+              </tr>
+              <tr>
+                <td class="column1">
+                  Height 
+                </td>
+                <td colspan="2">
+                  <input type="text" name="height" data-type="number" value="300"/>
+                </td>
+              </tr>
+              <tr>
+                <td class="column1">
+                  Title 
+                </td>
+                <td colspan="2">
+                  <input type="text" name="title" data-type="string" value="Title"/>
                 </td>
               </tr>
             </table>
